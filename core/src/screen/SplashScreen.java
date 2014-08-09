@@ -10,16 +10,25 @@ import com.kensch.braindrain.ResourceManager;
 
 public class SplashScreen extends Screen {
 	private OrthographicCamera camera;
+	
+	private long countDown;
 
 	@Override
 	public void create() {
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false, BrainDrain.WIDTH, BrainDrain.HEIGHT);
+		
+		countDown = System.currentTimeMillis();
 	}
 
 	@Override
 	public void update() {
-
+		camera.update();
+		
+		if (System.currentTimeMillis() - countDown >= 3000) {
+			ScreenManager.setScreen(new GameScreen());
+			this.dispose();
+		}
 	}
 
 	@Override
