@@ -33,7 +33,7 @@ public class GameScreen extends Screen {
 		Gdx.gl.glClear(GL30.GL_COLOR_BUFFER_BIT);
 		
 		sb.begin();
-		entityManager.render(sb);
+//		entityManager.render(sb);
 		sb.end();
 	}
 
