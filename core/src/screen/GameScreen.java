@@ -17,12 +17,14 @@ public class GameScreen extends Screen {
 	public void create() {
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false, BrainDrain.WIDTH, BrainDrain.HEIGHT);
+		
+		entityManager = new EntityManager();
 	}
 
 	@Override
 	public void update() {
-//		entityManager.update();
 		camera.update();
+		entityManager.update();
 	}
 
 	@Override
@@ -33,7 +35,7 @@ public class GameScreen extends Screen {
 		Gdx.gl.glClear(GL30.GL_COLOR_BUFFER_BIT);
 		
 		sb.begin();
-//		entityManager.render(sb);
+		entityManager.render(sb);
 		sb.end();
 	}
 
