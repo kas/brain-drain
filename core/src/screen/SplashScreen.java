@@ -23,12 +23,12 @@ public class SplashScreen extends Screen {
 
 	@Override
 	public void update() {
-		camera.update();
-		
-		if (System.currentTimeMillis() - countDown >= 3000) {
-			ScreenManager.setScreen(new GameScreen());
+		if (System.currentTimeMillis() - countDown >= 1500) {
+			ScreenManager.setScreen(new TitleScreen());
 			this.dispose();
 		}
+		
+		camera.update();
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class SplashScreen extends Screen {
 
 		sb.begin();
 		ResourceManager.font56.setColor(Color.BLACK);
-		ResourceManager.font56.draw(sb, "KENSCH", ((BrainDrain.WIDTH / 2) - (ResourceManager.font56.getBounds("KENSCH").width / 2)), (float) (0.75 * BrainDrain.HEIGHT));
+		ResourceManager.font56.draw(sb, BrainDrain.DEV, ((BrainDrain.WIDTH / 2) - (ResourceManager.font56.getBounds(BrainDrain.DEV).width / 2)), (float) (0.75 * BrainDrain.HEIGHT));
 		sb.end();
 	}
 

@@ -10,6 +10,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class BrainDrain implements ApplicationListener {
 	public static String NAME = "Brain Drain";
+	public static String DEV = "KENSCH";
 
 	public static int WIDTH;
 	public static int HEIGHT;
