@@ -1,1 +1,0 @@
-Android app demonstrating the Stroop Effect. Partially based off of Adam Savage's game from the Mythbusters episode "Laws of Attraction".
